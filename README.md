@@ -1,4 +1,4 @@
-# pharmacy-management-system
+# Pharmacy Management System
 
 1. Project Manager - Nana Kwame Owusu Antwi
 2. Programmers - Bernard Bapanaye, Kelvin Eduful
