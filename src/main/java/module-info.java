@@ -6,4 +6,6 @@ module com.codefx.codefx {
 
     opens com.codefx.app to javafx.fxml;
     exports com.codefx.app;
+    exports com.codefx.app.controller;
+    opens com.codefx.app.controller to javafx.fxml;
 }
