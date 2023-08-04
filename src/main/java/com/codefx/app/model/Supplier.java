@@ -1,4 +1,4 @@
-package com.codefx.app.repository.model;
+package com.codefx.app.model;
 
 public class Supplier {
     private int id;
