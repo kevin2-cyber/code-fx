@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.42, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pharmancy_sys
+-- Host: 127.0.0.1    Database: pharmacy_sys
 -- ------------------------------------------------------
 -- Server version	5.7.42-log
 
