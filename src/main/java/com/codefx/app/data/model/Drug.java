@@ -1,4 +1,4 @@
-package com.codefx.app.repository.model;
+package com.codefx.app.data.model;
 
 public class Drug {
     private int id;

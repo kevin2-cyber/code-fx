@@ -1,4 +1,4 @@
-package com.codefx.app;
+package com.codefx.app.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
