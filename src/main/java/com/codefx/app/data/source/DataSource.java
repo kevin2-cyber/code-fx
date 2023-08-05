@@ -20,14 +20,58 @@ public class DataSource {
         String query = "INSERT INTO drug values(?,?,?,?,?,?)";
 
         try {
-            // Get a connection to the database
+            // Get connection to database
             Connection connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
             // SQL statement
             Statement statement = connection.createStatement();
-            // Execute the SQL query
+            // Execute SQL query
             ResultSet resultSet = statement.executeQuery(query);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Drug find(int id){
+        String query = "SELECT drugId from drug";
+
+        try {
+            // Get connection to database
+            Connection connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            // SQL statement
+            Statement statement = connection.createStatement();
+            // Execute SQL query
+            ResultSet resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static ObservableList<Drug> findAll() {
+        String query = "SELECT * FROM drug";
+
+        try {
+            // Get connection to database
+            Connection connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            // SQL statement
+            Statement statement = connection.createStatement();
+            // Execute SQL query
+            ResultSet resultSet = statement.executeQuery(query);
+
+            // process the results
+            while (resultSet.next()) {
+                // create a drug object
+                Drug drug = new Drug(resultSet.getCursorName(),
+                        resultSet.getString(2),
+                        resultSet.getDouble(3),
+                        resultSet.getInt(4),
+                        resultSet.getInt(5)
+                );
+                drugs.add(drug);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
