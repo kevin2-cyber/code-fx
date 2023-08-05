@@ -1,6 +1,6 @@
 package com.codefx.app.repository;
 
-import com.codefx.app.model.PurchasedDrug;
+import com.codefx.app.data.model.PurchasedDrug;
 import com.codefx.app.util.ObservableStack;
 
 import java.util.List;

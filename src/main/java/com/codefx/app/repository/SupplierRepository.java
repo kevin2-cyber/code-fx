@@ -1,6 +1,6 @@
 package com.codefx.app.repository;
 
-import com.codefx.app.model.Supplier;
+import com.codefx.app.data.model.Supplier;
 import javafx.collections.ObservableList;
 
 import java.util.List;

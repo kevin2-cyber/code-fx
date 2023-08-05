@@ -1,6 +1,6 @@
 package com.codefx.app.repository;
 
-import com.codefx.app.model.Drug;
+import com.codefx.app.data.model.Drug;
 import com.codefx.app.util.ObservableQueue;
 
 import java.util.List;
