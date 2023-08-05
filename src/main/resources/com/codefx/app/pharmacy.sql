@@ -19,10 +19,10 @@
 -- Table structure for table `drug`
 --
 
-DROP TABLE IF EXISTS `drug`;
+DROP TABLE IF EXISTS drug;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `drug` (
+CREATE TABLE drug (
     `drugId` int(11) NOT NULL AUTO_INCREMENT,
     `drugName` varchar(45) NOT NULL,
     `drugQuantity` int(11) DEFAULT NULL,
@@ -37,9 +37,9 @@ CREATE TABLE `drug` (
 -- Dumping data for table `drug`
 --
 
-LOCK TABLES `drug` WRITE;
-/*!40000 ALTER TABLE `drug` DISABLE KEYS */;
-/*!40000 ALTER TABLE `drug` ENABLE KEYS */;
+LOCK TABLES drug WRITE;
+/*!40000 ALTER TABLE drug DISABLE KEYS */;
+/*!40000 ALTER TABLE drug ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,7 +57,10 @@ UNLOCK TABLES;
 -- Table structure for table `login`
 --
 
-CREATE TABLE `login` (
+DROP TABLE IF EXISTS login;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE login (
     `userId` int(11) NOT NULL AUTO_INCREMENT,
     `username` varchar(45) NOT NULL,
     `password` varchar(45) NOT NULL,
@@ -69,9 +72,9 @@ CREATE TABLE `login` (
 -- Dumping data for table `login`
 --
 
-LOCK TABLES `login` WRITE;
-/*!40000 ALTER TABLE `login` DISABLE KEYS */;
-/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+LOCK TABLES login WRITE;
+/*!40000 ALTER TABLE login DISABLE KEYS */;
+/*!40000 ALTER TABLE login ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -89,10 +92,10 @@ UNLOCK TABLES;
 -- Table structure for table `patient`
 --
 
-DROP TABLE IF EXISTS `patient`;
+DROP TABLE IF EXISTS patient;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `patient` (
+CREATE TABLE patient (
     `patientId` int(11) NOT NULL AUTO_INCREMENT,
     `patientName` varchar(45) NOT NULL,
     `prescription` varchar(45) NOT NULL,
@@ -106,9 +109,9 @@ CREATE TABLE `patient` (
 -- Dumping data for table `patient`
 --
 
-LOCK TABLES `patient` WRITE;
-/*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-/*!40000 ALTER TABLE `patient` ENABLE KEYS */;
+LOCK TABLES patient WRITE;
+/*!40000 ALTER TABLE patient DISABLE KEYS */;
+/*!40000 ALTER TABLE patient ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -126,10 +129,10 @@ UNLOCK TABLES;
 -- Table structure for table `pharmacist`
 --
 
-DROP TABLE IF EXISTS `pharmacist`;
+DROP TABLE IF EXISTS pharmacist;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pharmacist` (
+CREATE TABLE pharmacist (
     `pharma_id` int(11) NOT NULL AUTO_INCREMENT,
     `phrama_name` varchar(45) NOT NULL,
     `No_prescriptionMade` int(11) NOT NULL,
@@ -138,28 +141,28 @@ CREATE TABLE `pharmacist` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `pharmacist`
+-- Dumping data for table pharmacist
 --
 
-LOCK TABLES `pharmacist` WRITE;
-/*!40000 ALTER TABLE `pharmacist` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pharmacist` ENABLE KEYS */;
+LOCK TABLES pharmacist WRITE;
+/*!40000 ALTER TABLE pharmacist DISABLE KEYS */;
+/*!40000 ALTER TABLE pharmacist ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `signup`
+-- Table structure for table signup
 --
 
-DROP TABLE IF EXISTS `signup`;
+DROP TABLE IF EXISTS signup;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `signup` (
+CREATE TABLE signup (
     `userId` int(11) NOT NULL,
     `email` varchar(45) NOT NULL,
     `password` varchar(45) NOT NULL,
      PRIMARY KEY (`userId`),
      KEY `userId_idx` (`userId`),
-     CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES `login` (`userId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+     CONSTRAINT `userId` FOREIGN KEY (`userId`) REFERENCES login (`userId`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -167,7 +170,7 @@ CREATE TABLE `signup` (
 -- Dumping data for table `signup`
 --
 
-LOCK TABLES `signup` WRITE;
-/*!40000 ALTER TABLE `signup` DISABLE KEYS */;
-/*!40000 ALTER TABLE `signup` ENABLE KEYS */;
+LOCK TABLES signup WRITE;
+/*!40000 ALTER TABLE signup DISABLE KEYS */;
+/*!40000 ALTER TABLE signup ENABLE KEYS */;
 UNLOCK TABLES;
