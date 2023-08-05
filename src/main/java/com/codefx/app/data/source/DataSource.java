@@ -1,4 +1,5 @@
 package com.codefx.app.data.source;
 
-public class DataSource {
-}
+import com.codefx.app.repository.Repository;
+
+public interface DataSource<T> extends Repository<T> {}
